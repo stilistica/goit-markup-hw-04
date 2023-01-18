@@ -7,6 +7,7 @@
     --fcwhite: #E7E9FC;
     --hero-button: #404BBF;
     --header-shadow: #E7E9FC;
+    --customers-icon: #8e8f99;
 
 }
 
@@ -143,9 +144,21 @@ img {
 
 /* hero */
 .hero {
+    max-width: 1440px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 188px;
     padding-bottom: 188px;
     background-color: var(--accent-color);
+    background-image: linear-gradient( 
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url(../img/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
     text-align: center;
 }
@@ -191,8 +204,49 @@ img {
 .feature {
     display: flex;
 }
+.li-feature {
+    width: 264px;
+}
+/* .li-feature::before {
+    display: block;
+    content: "";
+    height: 112px;
+    margin-bottom: 8px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: var(--fdwhite);
+    border-radius: 4px;
+} */
+/* .icon-antenna::before {
+    background-image: url(../img/antenna.svg);
+}
+.icon-clock::before {
+    background-image: url(../img/clock.svg);
+}
+.icon-diagram::before {
+    background-image: url(../img/diagram.svg);
+}
+.icon-astronaut::before {
+    background-image: url(../img/astronaut.svg);
+} */
+
+
 .li-feature + .li-feature {
     margin-left: 24px;
+}
+.sk-d-ic {
+    margin-bottom: 8px;
+
+    background: var(--fdwhite);
+
+    border-radius: 4px;
+}
+.sk-icon {
+    width: 64px;
+    height: 64px;
+    margin: 24px 100px;
 }
 .feature .title {
     margin-top: 0;
@@ -262,7 +316,9 @@ img {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 }
-.li-team:not(:last-child) {
+.li-team:not(:last-child),
+.team-li-icon:not(:last-child),
+.customers-li:not(:last-child) {
     margin-right: 24px;
 }
 .team-name {
@@ -271,8 +327,68 @@ img {
 }
 .team p {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 8px;
     text-align: center;
+}
+
+.team-networks {
+    display: flex;
+    margin-left: 16px;
+    margin-right: 16px;
+
+}
+
+.team-li-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--selection);
+    border-radius: 50%;
+}
+.team-li-icon:hover, .team-li-icon:focus {
+    background-color: var(--hero-button);
+}
+.team-icon {
+    width: 16px;
+    height: 16px;
+    margin: 12px;
+}
+
+/* Customers */
+.customers {
+    padding-bottom: 120px;
+}
+.customers-ul {
+    display: flex;
+    margin-top: 72px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.customers-a {
+    display: inline-block;
+    width: 168px;
+    height: 88px;
+    border: 1px solid var(--customers-icon);
+    border-radius: 4px;
+}
+.customers-a:hover, 
+.customers-a:focus {
+    border: 1px solid var(--hero-button)
+}
+
+
+.customers-icon {
+    display: inline-block;
+    width: 104px;
+    height: 56px;
+    margin: 16px 32px;
+
+    fill: var(--customers-icon);
+}
+.customers-icon:hover, 
+.customers-icon:focus {
+    fill: var(--hero-button);
 }
 
 /* footer */
@@ -282,8 +398,12 @@ img {
     background-color: var(--accent-color);
     color: var(--fcwhite);
 }
+.foot-div {
+    display: flex;
+}
 .d-footer {
     width: 264px;
+    margin-right: 120px;
 }
 .footer .logo {
     margin-top: 0;
@@ -301,7 +421,38 @@ img {
     font-size: 16px;
     line-height: 1.5;
 }
+.media-h {
+    margin: 0 0 16px 0;
+    color: var(--white);
 
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+.foot-ul {
+    display: flex;
+}
+.foot-a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+.foot-li:not(:last-child) {
+    margin-right: 16px;
+}
+.foot-a:hover, 
+.foot-a:focus {
+    background: #31D0AA;
+}
+.foot-icon {
+    margin: 8px;
+    width: 24px;
+    height: 24px;
+}
 
 
 /* portfolio */
@@ -366,6 +517,14 @@ img {
     border-bottom: 1px solid var(--fcwhite);
     border-left:  1px solid var(--fcwhite);
     border-right:  1px solid var(--fcwhite);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+}
+.partf-div:hover {
+    border-bottom: 0.5px solid var(--fdwhite);
+    border-left:  0.5px solid var(--fdwhite);
+    border-right:  0.5px solid var(--fdwhite);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .port-title {
     margin-top: 0;
